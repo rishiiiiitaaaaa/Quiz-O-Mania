@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz Game</title>
+    <link rel="stylesheet" href="quiz1.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="start-screen">
+            <h1>Quiz Game</h1>
+            <select id="category">
+        <option>General Knowledge</option>
+        <option>Books</option>
+        <option>Film</option>
+        <option>Music</option>
+        <option>Musicals & Theatres</option>
+        <option>Television</option>
+        <option>Video Games</option>
+        <option>Board Games</option>
+        <option>Science & Nature</option>
+        <option>Computers</option>
+        <option>Sports</option>
+        <option>Geography</option>
+        <option>History</option>
+        </select>
+            <select id="difficulty">
+        <option>easy</option>
+        <option>medium</option>
+        <option>hard</option>
+        </select>
+            <button id="start-btn">Start Quiz</button>
+        </div>
+
+        <div id="game-screen" style="display:none;">
+            <div id="timer">15</div>
+            <h2 id="question"></h2>
+            <div id="options"></div>
+        </div>
+
+        <div id="end-screen" style="display:none;">
+            <h1>Quiz Over!</h1>
+            <h2 id="score"></h2>
+            <ul id="review-list"></ul>
+            <button id="play-again-btn">Play Again</button>
+        </div>
+    </div>
+    <!-- Sound Effects for correct and wrong answers -->
+    <audio id="correct-sound" src="https://pixabay.com/sound-effects/correct-6033/"></audio>
+    <audio id="wrong-sound" src="https://pixabay.com/sound-effects/wrong-47985/"></audio>
+
+    <script src="quiz1.js ">
+    </script>
+
+</body>
+
+</html>

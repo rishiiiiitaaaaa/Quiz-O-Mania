@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+#container {
+    background: #fff0f6;
+    padding: 30px;
+    border-radius: 20px;
+    width: 95%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+select,
+button {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 2px solid #ff77c6;
+    border-radius: 12px;
+    font-size: 1rem;
+    outline: none;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+select:hover,
+select:focus {
+    border-color: #ff4caf;
+    background: #ffe6f2;
+}
+
+button {
+    background: linear-gradient(135deg, #ff77c6, #ff4caf);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(255, 119, 198, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff4caf, #ff007f);
+    transform: translateY(-2px);
+}
+
+#options button {
+    background: linear-gradient(135deg, #ffb6f9, #ff92e2);
+    color: #fff;
+}
+
+#options button:hover {
+    background: linear-gradient(135deg, #fba4e8, #ff79c6);
+}
+
+
+/* Disabled state */
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    filter: grayscale(60%);
+}
+
+.selected {
+    background: linear-gradient(135deg, #ff6fa3, #f079c2);
+    color: #fff;
+}
+
+h1,
+h2 {
+    margin-bottom: 10px;
+    text-align: center;
+    color: #d63384;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style: none;
+    margin-top: 10px;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 12px;
+    padding: 12px;
+    background: #fff;
+    border: 1px solid #ffd6eb;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+li:hover {
+    background: #fff7fb;
+    transform: translateY(-3px);
+}
+
+#timer {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 15px;
+    color: #d63384;
+}
+
+#end-screen {
+    max-height: 100%;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+    }
+    #container {
+        width: 100%;
+        padding: 20px;
+    }
+    h1,
+    h2 {
+        font-size: 1.5rem;
+    }
+    button {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+    #timer {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1,
+    h2 {
+        font-size: 1.2rem;
+    }
+    button {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+    select {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Animations */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Floating Effect */
+
+.plus-one {
+    position: absolute;
+    color: #ff0048;
+    font-size: 3rem;
+    animation: shower 2s ease-out forwards;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+@keyframes shower {
+    from {
+        opacity: 3;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 2;
+        transform: translateY(-140px);
+    }
+}
